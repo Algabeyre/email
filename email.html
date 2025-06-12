@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            list-style: none;
+            text-decoration: none;
+        }
+        body{
+            background-color: #333;
+            color: #fff;
+        }
+        header{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+        .logo{
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            font-style: italic;
+        }
+        .navbar {
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between ;
+        }
+        a{
+          padding: 10px 15px;
+            transition: .3s ease;
+            font-size: 20px;
+            font-weight: 600; 
+            color: #fff; 
+        }
+
+        .navbar a:hover,
+        .navbar a.active{
+            color: #cc790b;
+        }
+        .hero{
+            background-color: #333;
+        }
+
+        .hero-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100vh;
+            padding: 0 20px;
+        }
+        .column-left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            color: #fff;
+            padding: 0rem 2rem;
+        }
+        .column-left h1{
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        .column-left h3{
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .column-left p{
+              font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .btn{
+            padding: 10px 16px;
+            background: #cc790b;
+            color: #fff;
+            border-radius: 18px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .btn:hover{
+            transform: scale(1.1);
+            background: #fff;
+            color: #333;
+        }
+        .price{
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            font-weight: 500;
+            color: #fff;
+        }
+        .price span{
+            color: #cc790b;
+            font-size: 24px;
+            font-weight: 400;
+            margin-left: 10px;
+        }
+        .column-right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .hero-image {
+            max-width: 100%;
+            max-height: 100vh;
+            border-radius: 50%;
+        }
+        @media screen and (max-width:  768px)  {
+            .hero-container{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href=""  class="logo">Cazanova</a>
+        <ul class="navbar">
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </header>
+    <div class="hero">
+        <div class="hero-container">
+            <div class="column-left">
+                <h3>Coffee For Hot Days</h3>
+                <h1>- Cold Brew</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Inventore cupiditate dolorem magnam, architecto maiores
+                     possimus rerum. Distinctio impedit soluta voluptate modi
+                      suscipit consequatur.
+                     Facilis, eveniet. Facilis natus odio nesciunt id.</p>
+                     <a href="" class="btn">Order Now</a>
+                     <a href="" class="price">£11.00 | <span>Regular Price</span></a>
+            </div>
+            <div class="column-left">
+                <img src="coffee.jpeg" alt="" class="hero-image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
