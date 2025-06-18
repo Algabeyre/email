@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            list-style: none;
+            text-decoration: none;
+        }
+        body{
+            background-color: #333;
+            color: #fff;
+        }
+        header{
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            width: 100%;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+        .logo{
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            font-style: italic;
+        }
+        .navlist {
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+             margin: 0 35px;
+             color: #fff;
+             font-size: 22px;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+        .navlist a{
+            padding: 10px 15px;
+            transition: .3s ease;
+            font-size: 20px;
+            font-weight: 600; 
+            color: #fff; 
+        }
+
+        .navlist a:hover,
+        .navlist a.active{
+            color: #cc790b;
+        }
+        .hero{
+            background-color: #333;
+            z-index:2000;
+            margin-top: 140px;
+        }
+
+        .hero-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100vh;
+            padding: 0 20px;
+        }
+        .column-left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            color: #fff;
+            padding: 0rem 2rem;
+        }
+        .column-left h1{
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        .column-left h3{
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .column-left p{
+              font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .btn{
+            display: inline-block;
+            padding: 10px 16px;
+            background: #cc790b;
+            color: #fff;
+            border-radius: 18px;
+            font-size: 18px;
+            font-weight: 400;
+            display:block;
+        }
+        .btn:hover{
+            transform: scale(1.1);
+            background: #fff;
+            color: #333;
+        }
+        .main-content{
+            display: flex;
+            align-items: center;
+        }
+        .price{
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            font-weight: 500;
+            color: #fff;
+        }
+        .price span{
+            color: #cc790b;
+            font-size: 24px;
+            font-weight: 400;
+            margin-left: 10px;
+        }
+        .column-right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .hero-image  {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        @media screen and (max-width:  768px)  {
+            .hero-container{
+                grid-template-columns: 1fr;
+            }
+        }
+        .right-content{
+            display: flex;
+            align-items: center;
+        }
+        .nav-btn{
+            padding: 7px 19px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #fff;
+            background: #333;
+            border:  1px solid #fff;
+            border-radius: 16px;
+            margin-right: 12px;
+        }
+        .nav-btn:hover{
+            background: #cc790b;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+        #menu-icon{
+            font-size: 42px;
+            font-weight: bold;
+            margin-right: 12px;
+            display: none;
+        }
+
+        
+@media screen and (max-width: 768px) {
+    nav{
+        padding: 22px 4%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero-container{
+        grid-template-columns: 1fr;
+        height: 100vh;
+        
+    }
+   #menu-icon{
+    display: block;
+   }
+   .navlist {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 100px 50px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(32px);
+    transition: all .6s ease-in-out;
+   }
+   .navlist a{
+    display: block;
+    padding: 0;
+    margin: 0px 0px 25px 8px;
+    font-size: 1.5rem;
+   }
+   .navlist.open{
+    left: 0;
+   }
+ 
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href=""  class="logo">Cafeteria</a>
+        <ul class="navlist">
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <div class="right-content">
+            <a href="" class="nav-btn">Sign In</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+    <div class="hero">
+        <div class="hero-container">
+            <div class="column-left">
+                <h3>Coffee For Hot Days</h3>
+                <h1>- Cold Brew</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Inventore cupiditate dolorem magnam, architecto maiores
+                     possimus rerum. Distinctio impedit soluta voluptate modi
+                      suscipit consequatur.
+                     Facilis, eveniet. Facilis natus odio nesciunt id.</p>
+                     <div class="main-content">
+                     <a href="" class="btn">Order Now</a>
+                     <a href="" class="price">£11.00 | <span>Regular Price</span></a></div>
+            </div>
+            
+            
+            <div class="column-left">
+              <img src="cups-and-mugs_1200x1200.webp" width="400ox" alt="" class="hero-image">
+            </div>
+            </div>
+            </div>
+        
+<script src="scriptt.js"></script>
+</body>
+</html>
